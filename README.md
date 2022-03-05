@@ -1,8 +1,11 @@
 # Templates para começar um simples api rest
 
-
-# Python -> Flask
+## Python
+### Flask
 basic/python/flask
 
-# Python -> Django
+### Django
 basic/python/django-rest
+
+### FastApi
+basic/python/fastapi
