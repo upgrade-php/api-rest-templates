@@ -3,3 +3,6 @@
 
 # Python -> Flask
 basic/python/flask
+
+# Python -> Django
+basic/python/django-rest
