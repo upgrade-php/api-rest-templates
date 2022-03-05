@@ -4,9 +4,9 @@ services:
     build:
       context: .
       target: local
-    container_name: eemovel-py
+    container_name: ${PROJECT_NAME}-py
     tty: true
     volumes:
       - .:/usr/src/app
     ports:
-      - "3000:3000"
+      - "3000:3000" #porta usada para debug
