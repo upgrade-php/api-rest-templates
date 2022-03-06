@@ -1,10 +1,9 @@
 # Templates Api Rest
 
-
-
 ## Python
 
 ### Flask
+<<<<<<< HEAD
 
 ```bash
     git clone git clone git@github.com:upgrade-php/api-rest-templates.git
@@ -36,7 +35,6 @@ basic/python/django-rest
 
 ### FastApi
 basic/python/fastapi
-
 
 ## PHP
 ### Slim
