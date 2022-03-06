@@ -1,9 +1,28 @@
 # Templates Api Rest
 
+O objetivo é criar um template para cada framework no qual ja trabalhei para facilitar a criação de novos projetos e ter como principal referencia para não ter que ficar procurando na web ou na documentação.
+
+Os templates devem seguir os principios do [Twekve Factors App](https://12factor.net/pt_br/)
+
+### A estratégia
+Vou dividir em 4 fases, a primeira vou implementar somente um metodo get retornando o Hello Workd, a segunda fazer vou implementar uma autenticação com jwt
+a terceira fase seria configura o deploy para o ambiente de staging e production, a quarta fase vou criar um script, para criar o projeto partir dos templates.
+
+### Lista de Templates
+* PHP
+    * [Slim](#slim) :white_check_mark:
+    * Laravel
+    * Symfony
+* Python
+    * [Flask](#flask) :white_check_mark:
+    * [Django](#django) :white_check_mark:
+    * [Fastapi](#fastapi) :white_check_mark:
+* Nodejs
+
 ## Python
 
 ### Flask
-<<<<<<< HEAD
+Criando um novo projeto em flask a apartir do template criado
 
 ```bash
     git clone git clone git@github.com:upgrade-php/api-rest-templates.git
@@ -25,9 +44,9 @@ Obs: é para ser executado dentro da container
 ```
 Rodando o test
 ````bash
-python python tests/test_entrypoint.py -v
-
+python tests/test_entrypoint.py -v
 ````
+Os tests rodando corretamente, seu projeto está pronto
 
 
 ### Django
@@ -37,5 +56,6 @@ basic/python/django-rest
 basic/python/fastapi
 
 ## PHP
+
 ### Slim
 basic/php/slim
