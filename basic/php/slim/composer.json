@@ -1,0 +1,25 @@
+{
+    "name": "upgrade-php/api-basic-slim",
+    "autoload": {
+        "psr-4": {
+            "UpgradePHP\\ApiBasicSlim\\": "src/",
+            "Teste\\ApiBasicSlim\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vicente Pinheiro",
+            "email": "vpp.filho@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.5",
+        "nyholm/psr7": "^1.5",
+        "nyholm/psr7-server": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpspec/prophecy": "~1.0"
+    }
+}
