@@ -1,4 +1,4 @@
-# Templates para começar um simples api rest
+# Templates Api Rest
 
 ## Python
 ### Flask
@@ -9,7 +9,6 @@ basic/python/django-rest
 
 ### FastApi
 basic/python/fastapi
-
 
 ## PHP
 ### Slim
