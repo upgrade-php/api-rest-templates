@@ -14,10 +14,11 @@ a terceira fase seria configura o deploy para o ambiente de staging e production
     * Laravel
     * Symfony
 * Python
-    * [Flask](#flask) :white_check_mark:
-    * [Django](#django) :white_check_mark:
-    * [Fastapi](#fastapi) :white_check_mark:
+    * [Flask](#flask) ✔️
+    * [Django](#django) ✔️
+    * [Fastapi](#fastapi) ✔️
 * Nodejs
+   * [Expressjs](#expressjs) ✔️
 
 ## Python
 
@@ -59,3 +60,8 @@ basic/python/fastapi
 
 ### Slim
 basic/php/slim
+
+## Node Js
+
+### ExpressJs
+/basic/nodejs/express
