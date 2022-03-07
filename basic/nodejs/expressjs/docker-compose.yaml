@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  nodejs:
+    build:
+      context: .
+      target: local
+    image: img-expressjs:local
+    container_name: tmpl-express-js
+    restart: unless-stopped
+    tty: true
+    environment:
+      - PORT=8080
+    volumes:
+      - ./:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    ports:
+      - 9229:9229
+
+volumes:
+  dbdata:
+  node_modules:
