@@ -11,7 +11,7 @@ a terceira fase seria configura o deploy para o ambiente de staging e production
 ### Lista de Templates
 * PHP
     * [Slim](#slim) :white_check_mark:
-    * Laravel
+    * Laravel(#laravel) ✔️
     * Symfony
 * Python
     * [Flask](#flask) ✔️
@@ -60,6 +60,9 @@ basic/python/fastapi
 
 ### Slim
 basic/php/slim
+
+### Laravel
+basic/php/laravel
 
 ## Node Js
 
