@@ -1,0 +1,28 @@
+# For more information: https://laravel.com/docs/sail
+version: '3'
+services:
+    laravel.test:
+        build:
+            context: ./vendor/laravel/sail/runtimes/8.1
+            dockerfile: Dockerfile
+            args:
+                WWWGROUP: '${WWWGROUP}'
+        image: sail-8.1/app
+        container_name: api-laravel-php
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        ports:
+            - '8088:80'
+        environment:
+            WWWUSER: '${WWWUSER}'
+            LARAVEL_SAIL: 1
+            XDEBUG_MODE: develop,debug
+            XDEBUG_CONFIG: "client_host=192.168.1.41"
+        volumes:
+            - '.:/var/www/html'
+            - './config/php/xdebug.ini:/etc/php/8.1/cli/conf.d/99-xdebug.ini'
+        networks:
+            - sail
+networks:
+    sail:
+        driver: bridge
