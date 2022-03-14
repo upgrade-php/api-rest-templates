@@ -87,7 +87,10 @@ Para instalar algumas dependencias caso precise, obs: rodar dentro da container
 ```
     composer update
 ```
-
+Rondando os tests:
+```
+    vendor/bin/phpunit
+```
 
 ## Node Js
 
