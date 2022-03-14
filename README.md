@@ -71,13 +71,23 @@ basic/php/laravel
     git clone git clone git@github.com:upgrade-php/api-rest-templates.git
     cp -rf api-rest-templates/basic/php/symfony new_project
     cd new_project
-    make start 
 ```
-Em outra aba do terminal
+Edite a variavel de ambiente PROJECT_NAME no arquivo .env
+
+```.env
+PROJECT_NAME=new_project
+```
+
+Em outra aba do terminal, para entra na container
 
 ```bash
     make app
 ```
+Para instalar algumas dependencias caso precise, obs: rodar dentro da container
+```
+    composer update
+```
+
 
 ## Node Js
 

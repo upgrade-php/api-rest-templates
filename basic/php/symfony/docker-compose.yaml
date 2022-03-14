@@ -21,7 +21,5 @@ services:
     volumes:
       - ./:/var/www
       - ./docker/php/nginx:/etc/nginx/conf.d/
-    ports:
-      - 8086:80
     depends_on:
       - php
