@@ -1,13 +1,22 @@
+ifneq (,$(wildcard ./.env))
+    include .env
+    export
+    ENV_FILE_PARAM = --env-file .env
+endif
+
+
 # Executables (local)
 DOCKER_COMP = docker-compose
 
 # Docker containers
 PHP_CONT = $(DOCKER_COMP) exec php
+CONTAINER_NAME = $(PROJECT_NAME)-app
 
 # Executables
 PHP      = $(PHP_CONT) php
 COMPOSER = $(PHP_CONT) composer
 SYMFONY  = $(PHP_CONT) bin/console
+
 
 # Misc
 .DEFAULT_GOAL = help
@@ -22,6 +31,7 @@ build: ## Builds the Docker images
 
 up: ## Start the docker hub in detached mode (no logs)
 	@$(DOCKER_COMP) up
+	
 
 start: build up
 
@@ -35,7 +45,7 @@ sh: ## Connect to the PHP FPM container
 	@$(PHP_CONT) sh
 
 app: ## Connect to the PHP FPM container
-	docker exec -it api-rest-symfony-php bash
+	docker exec -it ${CONTAINER_NAME} bash
 	
 composer: ## Run composer, pass the parameter "c=" to run a given command, example: make composer c='req symfony/orm-pack'
 	@$(eval c ?=)

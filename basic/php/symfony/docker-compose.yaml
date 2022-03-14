@@ -4,7 +4,7 @@ services:
     build:
       context: .
       target: local
-    container_name: 'api-rest-symfony-php'
+    container_name: ${PROJECT_NAME:-tmpl-api-rest}-app
     restart: unless-stopped
     tty: true
     volumes:
@@ -16,7 +16,7 @@ services:
       XDEBUG_CONFIG: "client_host=192.168.1.41"
   nginx:
     image: nginx:latest
-    container_name: tmpl-slim-nginx
+    container_name: ${PROJECT_NAME:-tmpl-api-rest}-nginx
     restart: unless-stopped
     volumes:
       - ./:/var/www
@@ -25,21 +25,3 @@ services:
       - 8086:80
     depends_on:
       - php
-###> doctrine/doctrine-bundle ###
-  database:
-    image: postgres:${POSTGRES_VERSION:-13}-alpine
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB:-app}
-      # You should definitely change the password in production
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMe}
-      POSTGRES_USER: ${POSTGRES_USER:-symfony}
-    volumes:
-      - db-data:/var/lib/postgresql/data:rw
-      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
-      # - ./docker/db/data:/var/lib/postgresql/data:rw
-###< doctrine/doctrine-bundle ###
-
-volumes:
-###> doctrine/doctrine-bundle ###
-  db-data:
-###< doctrine/doctrine-bundle ###

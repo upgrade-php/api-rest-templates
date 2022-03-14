@@ -1,9 +1,11 @@
 # Templates Api Rest
 
-O objetivo é criar um template para cada framework no qual ja trabalhei para facilitar a criação de novos projetos e ter como principal referencia para não ter que ficar procurando na web ou na documentação.
+Para facilitar a criação de novos projetos e ter esse projeto como principal referencia, para não ter que ficar procurando na web ou na documentação.
+
+A meta é criar um template para cada framework no qual ja trabalhei.
 
 Os templates devem seguir os principios do [Twekve Factors App](https://12factor.net/pt_br/)
-
+O objetivo é criar um template para cada framework no qual ja trabalhei, 
 ### A estratégia
 Vou dividir em 4 fases, a primeira vou implementar somente um metodo get retornando o Hello Workd, a segunda fazer vou implementar uma autenticação com jwt
 a terceira fase seria configura o deploy para o ambiente de staging e production, a quarta fase vou criar um script, para criar o projeto partir dos templates.
@@ -65,7 +67,17 @@ basic/php/slim
 basic/php/laravel
 
 ### Symfony
-basic/php/symfony
+```bash
+    git clone git clone git@github.com:upgrade-php/api-rest-templates.git
+    cp -rf api-rest-templates/basic/php/symfony new_project
+    cd new_project
+    make start 
+```
+Em outra aba do terminal
+
+```bash
+    make app
+```
 
 ## Node Js
 
