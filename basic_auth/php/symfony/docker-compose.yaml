@@ -1,5 +1,13 @@
 version: "3.4"
 services:
+  database:
+    image: postgres:${POSTGRES_VERSION:-14}-alpine
+    environment:
+      POSTGRES_DB: symfony
+      POSTGRES_PASSWORD: symfony
+      POSTGRES_USER: symfony
+    volumes:
+      - auth-symfony-data:/var/lib/postgresql/data:rw
   php:
     build:
       context: .
@@ -11,6 +19,7 @@ services:
       - ./:/var/www
       - ./docker/php/nginx/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
     environment:
+      DATABASE_URL: postgresql://symfony:symfony@database:5432/symfony?serverVersion=${POSTGRES_VERSION:-14}
       APP_ENV: dev
       XDEBUG_MODE: debug
       XDEBUG_CONFIG: "client_host=192.168.1.112"
@@ -27,3 +36,5 @@ services:
       - php
     ports:
       - '8084:80'
+volumes:
+  auth-symfony-data:

@@ -39,7 +39,7 @@ down: ## Stop the docker hub
 	@$(DOCKER_COMP) down --remove-orphans
 
 logs: ## Show live logs
-	@$(DOCKER_COMP) logs --tail=0 --follow
+	@$(DOCKER_COMP) logs --tail=10 --follow
 
 sh: ## Connect to the PHP FPM container
 	@$(PHP_CONT) sh
@@ -62,3 +62,9 @@ sf: ## List all Symfony commands or pass the parameter "c=" to run a given comma
 
 cc: c=c:c ## Clear the cache
 cc: sf
+
+migrate:
+	php bin/console doctrine:migrations:migrate
+
+db:
+	docker exec -it symfony-database-1 bash -c "psql -h database -U symfony -W"
