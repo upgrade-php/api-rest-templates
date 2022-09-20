@@ -86,12 +86,16 @@
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.1",
+        "hautelook/alice-bundle": "^2.7",
+        "overtrue/phplint": "^5.3",
         "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "6.0.*",
         "symfony/css-selector": "6.0.*",
         "symfony/http-client": "6.0.*",
         "symfony/maker-bundle": "^1.45",
         "symfony/phpunit-bridge": "^6.0",
-        "symfony/var-dumper": "6.0.*"
+        "symfony/var-dumper": "6.0.*",
+        "vimeo/psalm": "^4.27"
     }
 }

@@ -3,7 +3,6 @@
 namespace App\Tests\Base;
 
 use Doctrine\ORM\Tools\SchemaTool;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 trait ReflashDatabaseTrait
 {

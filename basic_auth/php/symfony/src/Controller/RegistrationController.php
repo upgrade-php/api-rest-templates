@@ -20,10 +20,9 @@ class RegistrationController extends AbstractController
      */
     public function index(Request $request, UserRepository $userRepository): Response
     {
-          
         $decoded = json_decode($request->getContent());
         $userRepository->create($decoded->email, $decoded->password);
-  
+
         return $this->json(['message' => 'Registered Successfully']);
     }
 }

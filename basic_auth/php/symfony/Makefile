@@ -68,3 +68,8 @@ migrate:
 
 db:
 	docker exec -it symfony-database-1 bash -c "psql -h database -U symfony -W"
+
+lint:
+	vendor/bin/phplint ./src --exclude=vendor
+	php vendor/bin/phpcs ./src/
+	./vendor/bin/psalm --init ./src/
